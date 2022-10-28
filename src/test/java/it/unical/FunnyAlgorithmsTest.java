@@ -66,7 +66,20 @@ public class FunnyAlgorithmsTest {
 	    System.out.println(fine);
 	}
 	
-	
+	@Test
+    public void selectionSortTest() {
+		
+		int arrSelectionSort1 [] = {5, 2, 3, 4, 1};
+    	assertEquals(Arrays.asList(1, 2, 3, 4, 5), funny.selectionSort(arrSelectionSort1, 0));
+    	
+    	int arrSelectionSort2 [] = {5, 2, 3, 4, 1};
+    	assertEquals(Arrays.asList(5, 4, 3, 2, 1), funny.selectionSort(arrSelectionSort2, 1));
+    	
+        DateTime ora = new DateTime();
+        System.out.println(ora);
+    }
+    
+    
     @Test
     public void stringToIntConverterTest() {
     	// Caso di prova n°1:
