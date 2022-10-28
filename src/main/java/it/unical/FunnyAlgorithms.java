@@ -2,11 +2,6 @@ package it.unical;
 
 public class FunnyAlgorithms {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-	
 	/**
 	 * Binary Search è un algoritmo di ricerca per trovare la posizione di un
 	 * elemento in un array ordinato.
@@ -74,8 +69,30 @@ public class FunnyAlgorithms {
 	 * @return
 	 * @throws UnsupportedOperationException
 	 */
+	/*
+	 * Implementare l’algoritmo stringToIntConverter che dato uno String lo deve convertire ad un numero intero. 
+	 * A tal fine considerare le seguente specifiche:
+	 * 	- Il metodo deve accettare una stringa e convertirla in un numero intero
+	 *  - Le stringhe ben formate non contengono caratteri diversi da numeri, spazi finali e meno.
+	 *   -Il numero rappresentato deve essere compreso nell'intervallo [-32768, 32767], eccezione in caso contrario
+	 *    Non sono ammessi numeri reali 
+	 *    Esempio corretto: “ -3”, “500”, “-10”, “32767” 
+	 *    Esempio sbagliato:  “2 3”, “32768”, “A3”, “2.3” 
+	 */
 	public int stringToIntConverter(String number) throws UnsupportedOperationException {
-		throw new UnsupportedOperationException("To be implemented");
+		/*
+		System.out.println(number.getClass().getSimpleName());
+		if (number.getClass().getSimpleName() != "String") {
+			throw new UnsupportedOperationException("Il parametro deve essere di tipo 'String'.");
+		}*/
+		
+		Integer intero = Integer.valueOf(number);
+		
+		if (intero < -32768 || intero > 32767) {
+			throw new UnsupportedOperationException("Il numero rappresentato deve essere compreso nell'intervallo [-32768, 32767].");
+		}
+		
+		return intero;
 	}
 
 }
